@@ -1,6 +1,6 @@
-ackage exercise1;
+package exercise1;
 
-public interface IDbook {
+public interface Idbook {
         void addBook();
         void updateBook();
         void displyBook();
