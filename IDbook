@@ -1,0 +1,7 @@
+ackage exercise1;
+
+public interface IDbook {
+        void addBook();
+        void updateBook();
+        void displyBook();
+}
