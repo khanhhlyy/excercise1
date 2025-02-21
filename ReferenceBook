@@ -1,0 +1,31 @@
+package exercise1;
+
+import java.util.Date;
+
+public abstract class ReferenceBook extends Book {
+
+    private double tax;
+
+    public ReferenceBook(String bookId, String publisher, Date entryDate, double unitPrice, double quantity, double tax) {
+        super(bookId, publisher, entryDate, unitPrice, quantity);
+        this.tax = tax;
+    }
+
+    @Override
+    public void addBook() {
+        System.out.println("add ReferenceBook: ");
+    }
+
+    public void updateBook(String id) {
+        if (this.bookId.equals(id)) {
+            System.out.println("update ReferenceBook: " + id);
+        } else {
+            System.out.println("update not found");
+        }
+    }
+
+    public void displayBook() {
+        super.displayBook();
+        System.out.println("Tax: " + tax);
+    }
+}
