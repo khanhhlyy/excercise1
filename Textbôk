@@ -1,0 +1,31 @@
+package exercise1;
+
+import java.util.Date;
+
+public abstract class TextBook extends Book {
+
+    private String status;
+
+    public TextBook(String bookId, String publisher, Date entryDate, double unitPrice, double quantity, String status) {
+        super(bookId, publisher, entryDate, unitPrice, quantity);
+        this.status = status;
+    }
+
+    @Override
+    public void addBook() {
+        System.out.println("add textbook: ");
+    }
+
+    public void updateBook(String id) {
+        if (this.bookId.equals(id)) {
+            System.out.println("update textbook: " + id);
+        } else {
+            System.out.println("update not found");
+        }
+    }
+
+    public void displayBook() {
+        super.displayBook();
+        System.out.println("Status: " + status);
+    }
+}
