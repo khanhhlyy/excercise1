@@ -1,0 +1,34 @@
+package exercise1;
+
+import java.util.Date;
+
+public class Processor {
+
+    public static void main(String[] args) {
+        TextBook tb = new TextBook("TB001", "O'Reilly", new Date(), 20.5, 100, "New") {
+            @Override
+            public void updateBook() {
+                throw new UnsupportedOperationException("Not supported yet."); 
+
+            @Override
+            public void displyBook() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+        };
+        ReferenceBook rb = new ReferenceBook("RB001", "Springer", new Date(), 30.0, 50, 0.1) {
+            @Override
+            public void updateBook() {
+                throw new UnsupportedOperationException("Not supported yet."); 
+            @Override
+            public void displyBook() {
+                throw new UnsupportedOperationException("Not supported yet."); 
+            }
+        };
+
+        System.out.println("");
+        tb.displayBook();
+
+        System.out.println("");
+        rb.displayBook();
+    }
+}
